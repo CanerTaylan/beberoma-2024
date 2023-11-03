@@ -1,0 +1,43 @@
+{% extends 'admin_paneli/admin.html' %}
+{% block content %}
+
+
+<div class="d-flex flex-column py-2">
+
+    <h3> {{ title }}</h3>
+    <h4>{{ sub_title }}</h4>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" name="return_list" class="btn btn-success">Kaydet ve Listeye dön</button>
+        <button type="submit" name="add_new" class="btn btn-outline-success">Kaydet ve Yeni EKle</button>
+    </form>
+
+
+</div>
+
+
+<script>
+    function SlugForTurkish(str) {
+        var turkishCharacters = { 'ı': 'i', 'I': 'i', 'İ': 'i', 'ş': 's', 'Ş': 's', 'ğ': 'g', 'Ğ': 'g', 'ç': 'c', 'Ç': 'c', 'ü': 'u', 'Ü': 'u', 'ö': 'o', 'Ö': 'o' };
+        return str.replace(/[ıIİşŞğĞçÇüÜöÖ]/g, function (char) {
+            return turkishCharacters[char];
+        });
+    }
+
+    function updateSlug() {
+        var title = document.getElementById('id_title').value;
+        var slug = SlugForTurkish(title)
+            .replace(/\s+/g, '-')  // Boşlukları tireye çevir
+            .replace(/[^a-zA-Z0-9-]/g, '')  // Alfanümerik ve tireleri koru
+            .toLowerCase()   // küçük harfe döndürür.
+            .slice(0, 150);  // En fazla 150 karakter
+        document.getElementById('id_slug').value = slug;
+    }
+    // Başlık alanı değiştikçe otomatik olarak slug'ı güncelle
+    document.getElementById('id_title').addEventListener('keyup', updateSlug);
+</script>
+{% endblock %}

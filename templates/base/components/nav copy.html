@@ -1,0 +1,261 @@
+{% load static %}
+
+<style>
+    /* Dropdown menüyü görünmez yap */
+    .navbarDropdown {
+        display: none;
+    }
+
+    /* Ana menü öğesine gelindiğinde dropdown menüyü görünür yap */
+    .nav-item:hover .navbarDropdown {
+        display: block;
+    }
+</style>
+<!--logo - search bar - Right side start-->
+<div class="p-2 top-nav text-center bg-white border-bottom">
+    <div class="container">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+                <a href="{% url 'index' %}" class="ms-md-2 d-none d-lg-block">
+                    <img src="{% static 'image/logo.png' %}" height="80" />
+                </a>
+            </div>
+            <!-- Logo -->
+
+            <!-- Search Bar -->
+            <div class="col-md-4 d-flex align-items-centerr">
+                <div class="d-flex input-group w-100 my-auto search">
+                    <div class="form-outline">
+                        <input autocomplete="on" id="search-focus" type="search" class="form-control rounded" />
+                        <label class="form-label" for="form1">Kataloğumuzda arama yapın</label>
+                    </div>
+                    <button type="button" class="btn btn-sm d-none d-lg-flex">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!--  Search Bar -->
+            <!--logo - search bar ends -->
+
+            <!-- Right side -->
+            <div class="right-side col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
+                <div class="d-flex">
+                    <!-- Cart -->
+                    <a class="text-reset me-3 me-lg-2 mt-2 align-self-center" href="#">
+                        <span><i class="fas fa-shopping-cart" style="font-size: 18px;"></i></span>
+                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                    </a>
+                    <span class="d-none d-lg-block align-self-center me-2 mt-2" style="font-size: 15px;">Sepetim</span>
+                    <div class="mt-2 me-2">
+                        <a href="#" role="button" class="btn register-button align-self-center">Kayıt Ol</a>
+                    </div>
+                    <!-- profil -->
+                    <div class="dropdown mt-2 ">
+                        <button class="dropdown-toggle d-flex align-items-center  btn account-button "
+                            id="navbarDropdownMenuLink" type="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Hesabım
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end profil" aria-labelledby="navbarDropdownMenuLink"
+                            style="z-index: 9999;">
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-circle-user me-2"></i>Profil Bilgim</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-gifts me-2"></i>Siparişlerim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-shop me-2"></i>Adreslerim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-door-open me-2"></i>Çıkış Yap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Right elements -->
+        </div>
+    </div>
+</div>
+<!--logo - search bar - Right side ends-->
+
+
+<!-- Main-navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+        <a href="#!" class="ms-md-2 d-lg-none">
+            <img src="{% static 'image/logo.png' %}" height="50" />
+        </a>
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#beberoma-navbar"
+            aria-controls="beberoma-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-text">Menü</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="fas fa-angles-down"></span>
+            <span class="fas fa-angles-up"></span>
+        </button>
+
+        <div class="collapse navbar-collapse mt-2" id="beberoma-navbar">
+            <ul class="navbar-nav me-auto ps-lg-0 menu">
+
+                <li class="nav-item menu-item home-icon d-none d-lg-block">
+                    <a class="nav-link" href="{% url 'index' %}">
+                        <i class="fas fa-house"></i></a>
+                </li>
+
+                <li class="nav-item menu-item  dropdown">
+                    <a class=" nav-link dropdown-toggle" href="product/category.html" id="navbarDropdown">
+                        KIZ BEBEK 0-24 AY
+                    </a>
+                    <div class="dropdown-menu border border-1 border-rounded navbarDropdown "
+                            aria-labelledby=" navbarDropdown">
+                        <div class="container ">
+                            <div class="row my-2 ">
+                                <div class="col-6 col-sm-4 mb-2">
+                                    <div class=" list-group list-group-flush dropdown-menu-link">
+                                        <a href="product/product.html" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Tulum</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Yelek, Hırka, Bolero</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Uzun Kollu Üst</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Elbise, Etek</a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 mb-2">
+                                    <div class=" list-group list-group-flush dropdown-menu-link">
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Şort Takım</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Mont, Ceket</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Kısa Kollu Üst</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Uyku Tulumu</a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 mb-2">
+                                    <div class=" list-group list-group-flush dropdown-menu-link">
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Tayt, Pantolon Takım</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Battaniye, Pike</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Eşofman, Pijama</a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item menu-item  dropdown">
+                    <a class="nav-link dropdown-toggle" href="products.html">
+                        ERKEK BEBEK 0-24 AY
+                    </a>
+                    <div class="dropdown-menu border border-1 border-rounded navbarDropdown"
+                        aria-labelledby="navbarDropdown">
+                        <div class="container">
+                            <div class="row my-2">
+                                <div class="col-6 col-sm-4 mb-2">
+                                    <div class=" list-group list-group-flush dropdown-menu-link">
+                                        <a href="products.html" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Tulum</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Yelek, Hırka, Bolero</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Uzun Kollu Üst</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Elbise, Etek</a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 mb-2">
+                                    <div class=" list-group list-group-flush dropdown-menu-link">
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Şort Takım</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Mont, Ceket</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Kısa Kollu Üst</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Uyku Tulumu</a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 mb-2">
+                                    <div class="list-group list-group-flush dropdown-menu-link">
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Tayt, Pantolon Takım</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Battaniye, Pike</a>
+                                        <a href="" class="list-group-item list-group-item-action"><i
+                                                class="fas fa-caret-right pe-2"></i>Eşofman, Pijama</a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item menu-item  dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#">
+                        KIZ ÇOCUK 2-14 YAŞ
+                    </a>
+                    <div class="dropdown-menu border border-1 border-rounded" aria-labelledby="navbarDropdown">
+                        <div class="container">
+                            <div class="row my-2">
+                                <div class="col-6 col-sm-6 mb-2">
+                                    <div class=" list-group list-group-flush dropdown-menu-link">
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Tulum</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Yelek, Hırka, Bolero</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Uzun Kollu Üst</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Elbise, Etek</a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-6 mb-2">
+                                    <div class=" list-group list-group-flush dropdown-menu-link">
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Tulum</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Yelek, Hırka, Bolero</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Uzun Kollu Üst</a>
+                                        <a href="" class="list-group-item list-group-item-action">
+                                            <i class="fas fa-caret-right pe-2"></i>Elbise, Etek</a>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item menu-item  dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#">
+                        ERKEK ÇOCUK 2-14 YAŞ </a>
+                </li>
+                <li class="nav-item menu-item  dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#">
+                        AYAKKABI </a>
+                </li>
+                <li class="nav-item menu-item  dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#">
+                        AKSESUAR </a>
+                </li>
+                <li class="nav-item menu-item  dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#">
+                        OUTLET </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Main-Navbar ends-->

@@ -1,0 +1,133 @@
+{% load static %}
+
+
+<!--logo - search bar - Right side start-->
+<div class="p-2 top-nav text-center bg-white border-bottom">
+    <div class="container">
+        <div class="row">
+            <!-- Logo -->
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+                <a href="{% url 'index' %}" class="ms-md-2 d-none d-lg-block">
+                    <img src="{% static 'image/logo.png' %}" height="80" />
+                </a>
+            </div>
+            <!-- Logo -->
+
+            <!-- Search Bar -->
+            <div class="col-md-4 d-flex align-items-centerr">
+                <div class="d-flex input-group w-100 my-auto search">
+                    <div class="form-outline">
+                        <input autocomplete="on" id="search-focus" type="search" class="form-control rounded" />
+                        <label class="form-label" for="form1">Kataloğumuzda arama yapın</label>
+                    </div>
+                    <button type="button" class="btn btn-sm d-none d-lg-flex">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!--  Search Bar -->
+            <!--logo - search bar ends -->
+
+            <!-- Right side -->
+            <div class="right-side col-md-4 d-flex justify-content-center justify-content-md-end align-items-center">
+                <div class="d-flex">
+                    <!-- Cart -->
+                    <a class="text-reset me-3 me-lg-2 mt-2 align-self-center" href="#">
+                        <span><i class="fas fa-shopping-cart" style="font-size: 18px;"></i></span>
+                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                    </a>
+                    <span class="d-none d-lg-block align-self-center me-2 mt-2" style="font-size: 15px;">Sepetim</span>
+                    <div class="mt-2 me-2">
+                        <a href="#" role="button" class="btn register-button align-self-center">Kayıt Ol</a>
+                    </div>
+                    <!-- profil -->
+                    <div class="dropdown mt-2 ">
+                        <button class="dropdown-toggle d-flex align-items-center  btn account-button "
+                            id="navbarDropdownMenuLink" type="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                            Hesabım
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end profil" aria-labelledby="navbarDropdownMenuLink"
+                            style="z-index: 9999;">
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-circle-user me-2"></i>Profil Bilgim</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-gifts me-2"></i>Siparişlerim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-shop me-2"></i>Adreslerim</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <i class="fas fa-door-open me-2"></i>Çıkış Yap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Right elements -->
+        </div>
+    </div>
+</div>
+<!--logo - search bar - Right side ends-->
+
+
+<!-- Main-navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+        <a href="{% url 'index' %}" class="ms-md-2 d-lg-none">
+            <img src="{% static 'image/logo.png' %}" height="50" />
+        </a>
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#beberoma-navbar"
+            aria-controls="beberoma-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-text">Menü</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="fas fa-angles-down"></span>
+            <span class="fas fa-angles-up"></span>
+        </button>
+
+        <div class="collapse navbar-collapse mt-2" id="beberoma-navbar">
+            <ul class="navbar-nav me-auto ps-lg-0 menu">
+                <li class="nav-item menu-item home-icon d-none d-lg-block">
+                    <a class="nav-link" href="{% url 'index' %}">
+                        <i class="fas fa-house"></i>
+                    </a>
+                </li>
+
+                {% for category_item in categories %}
+                <li class="nav-item menu-item  dropdown">
+                    <a class=" nav-link dropdown-toggle"
+                        href="{% url 'category_all' category_slug=category_item.slug %}" id="navbarDropdown"
+                        data-toggle="dropdown">
+                        {{ category_item.title|upper }}
+                    </a>
+                    <div class="dropdown-menu border border-1 border-rounded navbarDropdown dropdown-menu-end fade-up"
+                        aria-labelledby=" navbarDropdown">
+                        <ul class="m-2 p-0 list-group list-group-flush dropdown-menu-list ">
+                            {% for subcategory_item in category_item.subcategory_set.all %}
+                            <li class=" list-group-item list-group-item-action dropdown-menu-link ">
+                                <a href="{% url 'subcategory_all' category_slug=category_item.slug subcategory_pk=subcategory_item.pk subcategory_slug=subcategory_item.slug %}"
+                                    class="">
+                                    <i class="fas fa-caret-right pe-2"></i>
+                                    {{ subcategory_item.title|title }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Main-Navbar ends-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdownMenuLists = document.querySelectorAll(".dropdown-menu-list");
+        for (var i = dropdownMenuLists.length - 2; i < dropdownMenuLists.length; i++) {
+            var currentDropdownMenuList = dropdownMenuLists[i];
+            currentDropdownMenuList.classList.add("special-grid");
+        }
+    });
+</script>

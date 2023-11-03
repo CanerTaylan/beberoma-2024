@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    {% include 'base/components/head.html' %}
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <div class="main-box">
+        {% include 'base/components/message.html' %}
+
+        {% include 'base/components/nav.html' %}
+    
+    
+        {% block content %}
+    
+        {% endblock %}
+    
+    
+    
+        {% include 'base/components/footer.html' %}
+    
+        {% include 'base/components/footer_scripts.html' %}
+    </div>
+   
+</body>
+
+</html>

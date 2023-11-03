@@ -1,0 +1,67 @@
+
+{% load static %}
+<div class="row g-4 product_row py-3">
+
+    {% for item in products %}
+    <div class="col-6 col-md-4 col-lg-3 product-col">
+        <div class="card h-100 text-center product-card">
+            <div class="product-body">
+                <div class="bg-image  hover-zoom ripple product-img  vh-100" data-mdb-ripple-color="light">
+
+                    {% if item.cover_image %}
+
+                    <img src="{{ item.cover_image.url }}" class="img-fluid" />
+                    {% else %}
+
+                    <img src="{% static 'image/default.jpg' %}" class="img-fluid" />
+                    {% endif %}
+
+                    <a href="{% url 'product_details' category_slug=category.slug product_slug=item.slug %}">
+                        <div class="hidden-button">
+                            <button class="btn" type="button">Ürüne git</button>
+                        </div>
+                    </a>
+                    <div class="product-tags">
+                        <img class="pop-icon" src="{% static 'image/pop-product.png' %}" alt="">
+                        <img class="new-icon" src="{% static 'image/new-product.png' %}" alt="">
+                    </div>
+                </div>
+
+
+                <div class="card-body text-center">
+
+                    <h5 class="card-title">{{ item.title }}</h5>
+
+                    <p class="card-text"></p>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center flex-wrap mb-3">
+                        <h5 class="me-3 p-old-price">
+                            255,90 TL</h5>
+                        <h5 class="p-price ">{{ item.price }} TL</h5>
+                        <h6>{{ item.stock }}</h6>
+                    </div>
+                    <button type="button" class="btn">Bedenler <i
+                            class="fas fa-circle-chevron-down ms-2 fs-6"></i>
+                    </button>
+                    <div class=" product-sizes">
+                        <span class="title">Bedenler</span>
+                        <ul class="list-inline sizes">
+                            <li class="list-inline-item">0-3 ay</li>
+                            <li class="list-inline-item">0-6 ay</li>
+                            <li class="list-inline-item">1 yaş</li>
+                            <li class="list-inline-item">2 yaş</li>
+                            <li class="list-inline-item">3 yaş</li>
+                            <li class="list-inline-item">8 yaş</li>
+                            <li class="list-inline-item">9 yaş</li>
+                            <li class="list-inline-item">14 yaş</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+    </div>

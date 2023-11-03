@@ -1,0 +1,18 @@
+{% if messages %}
+{% for message in messages %}
+
+<div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} mb-0  alert-absolute fade show "
+    id="alert-mess" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close ms-2" data-mdb-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="success {% if message.tags %}success-{{ message.tags }}{% endif %} mb-0  success-absolute fade show "
+    id="success-mess" role="success">
+    {{ message }}
+    <button type="button" class="btn-close ms-2" data-mdb-dismiss="success" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+

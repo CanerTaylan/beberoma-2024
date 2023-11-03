@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+@font-face {
+     font-family: 'laCartoonerie';
+     src: url('laCartoonerie.eot');
+     src: url('laCartoonerie.eot?#iefix') format('embedded-opentype'),
+          url('laCartoonerie.woff2') format('woff2'),
+          url('laCartoonerie.woff') format('woff'),
+          url('laCartoonerie.ttf') format('truetype'),
+          url('laCartoonerie.svg#lacartoonerie') format('svg');
+     font-weight: normal;
+     font-style: normal;
+
+}
+
+@font-face {
+     font-family: 'Snap';
+     src: url('Snap.eot');
+     src: url('Snap.eot?#iefix') format('embedded-opentype'),
+          url('Snap.woff2') format('woff2'),
+          url('Snap.woff') format('woff'),
+          url('Snap.ttf') format('truetype'),
+          url('Snap.svg#Snap') format('svg');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+     font-family: insta;
+     src: url('Billabong_regular.eot');
+     src: url('Billabong_regular.otf'),
+          url('Billabong_regular.woff') format("woff"),
+          url('Billabong_regular.ttf') format("truetype");
+     font-weight: normal;
+     font-style: normal;
+}

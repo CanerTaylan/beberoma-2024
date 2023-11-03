@@ -1,0 +1,126 @@
+{% load static %}
+
+<!--Footer-->
+<footer class="page-footer container-fluid mt-4">
+    <!--Social buttons-->
+    <div class=" social-media row">
+        <div class="col-5 col-md-6 d-md-flex justify-content-center justify-content-md-end align-items-center p-0">
+            <div class="text-center text-md-end d-md-flex border border-0 border-end">
+                <p class="mb-0 fw-bold fs-4 text-light me-3 align-self-center">Bizi takip edin</p>
+                <div class=" justify-content-center">
+                    <a class="btn-floating btn-fb fb-popover" href="https://www.facebook.com/beberomaBebekMagazasi"
+                        tabindex="0" data-mdb-toggle="popover" data-mdb-trigger="hover focus" data-mdb-placement="top"
+                        data-mdb-content="@beberomaBebekMagazasi" data-mdb-custom-class="facebook-popover">
+                        <i class="fab fa-facebook-f"> </i>
+                    </a>
+                    <a class="btn-floating btn-inst inst-popover" href="https://www.instagram.com/beberoma_bursa/"
+                        tabindex="0" data-mdb-toggle="popover" data-mdb-trigger="hover focus" data-mdb-placement="top"
+                        data-mdb-content="@beberoma_bursa" data-mdb-custom-class="instagram-popover">
+                        <i class="fab fa-instagram"> </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7 col-md-6 d-md-flex justify-content-center justify-content-md-start align-items-center p-0">
+            <div class="text-center text-md-start d-md-flex">
+                <p class="mb-0 fw-bold fs-4 text-light mx-3 align-self-center">Bizimle iletişime geçin</p>
+                <a class="btn-floating btn-contact" tabindex="0" data-mdb-toggle="popover"
+                    data-mdb-trigger="hover focus" data-mdb-placement="top" data-mdb-content="Bize yazın... "
+                    data-mdb-custom-class="contact-popover"><i class="fas fa-envelopes-bulk"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--/.Social buttons-->
+
+    <!--Footer Links-->
+    <div class="footer-links">
+        <div class="row d-flex justify-content-center">
+            <!--First column-->
+            <div class="col-xl-3 col-lg-4 col-md-5  pb-sm-2">
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{% static 'image/fav_logo.png' %}" height="30" alt="" id="logo"><span
+                        class="ms-2 fs-2 align-content-center" id="logo">beberoma</span>
+                </div>
+                <p><i class="fas fa-map-location-dot fa-2x me-3 text-white"></i>Ertuğrul Mah. Uğur Mumcu Cad.
+                    Taşyakan Sitesi No: 76 H/3 Blok Özlüce Nilüfer/ Bursa</p>
+                <p><i class="fas fa-phone-flip fa-2x me-3 text-white"></i>0224-247 53 70</p>
+                <p><i class="fas fa-at fa-2x me-3 text-white"></i>info@beberoma.com</p>
+                <div class="secure_payment d-flex flex-row ">
+                    <img class="mastercard" src="{% static 'image/mastercard.webp' %}" alt="Master Card">
+                    <img class="visa" src="{% static 'image/visa.webp' %}" alt="Visa">
+                    <img class="troy" src="{% static 'image/troy.webp' %}" alt="Troy">
+                    <img class="amex" src="{% static 'image/amex.webp' %}" alt="American Express">
+                    <img class="ssl" src="{% static 'image/ssl.png' %}" alt="SSL">
+                </div>
+            </div>
+            <!--/.First column-->
+            <div class="vr vr-blurry p-0 d-sm-none d-md-block"></div>
+            <hr class="w-100 clearfix d-md-none ">
+
+            <!--Second column-->
+            <div class="col-lg-3 col-md-3 ps-md-3" style="    line-height: 2rem;">
+                <h5 class="text-uppercase font-weight-bold">ÜRÜNLER</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Fiyatı düşenler</span></a></li>
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Yeni ürünler</span></a></li>
+
+                    {% for category in categories %}
+                    <li><i class="fas fa-play me-2"></i>
+                        <a href="{% url 'category_all' category.slug %}"> <span>{{ category.title }}</span></a>
+                    </li>
+
+                    {% endfor %}
+
+                </ul>
+            </div>
+            <!--/.Second column-->
+            <div class="vr vr-blurry p-0 d-sm-none d-md-block"></div>
+            <hr class="w-100 clearfix d-md-none">
+
+            <!--Third column-->
+            <div class="col-lg-3 col-md-3 ps-md-3" style="    line-height: 2rem;">
+                <h5 class="text-uppercase font-weight-bold">GEREKLİ BİLGİLER</h5>
+                <ul class="list-unstyled">
+
+                    {% for page_item in pages %}
+                    <li><i class="fas fa-play me-2"></i>
+                        <a href="{% url 'page_all' page_slug=page_item.slug %}">
+                            <span>{{ page_item.title }}</span>
+                        </a>
+                    </li>
+
+                    {% endfor %}
+
+
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Kişisel Verilerin Korunması</span></a></li>
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Mesafeli Satış Sözleşmesi</span></a></li>
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>İade ve Değişim Koşulları</span></a></li>
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Kargo ve ödeme</span></a></li>
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Beberoma kimdir?</span></a></li>
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Ölçü Tablosu</span></a></li>
+                    <li><i class="fas fa-play me-2"></i><a href="#!"> <span>Bizim ile iletişime geçin</span></a></li>
+                </ul>
+            </div>
+            <!--/.Third column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!-- Copyright -->
+    <div class="row">
+        <div class=" d-flex p-3 copyright">
+            <div class=" d-flex align-items-center justify-content-center flex-fill">
+                <span>© 2023 Copyright:</span>
+                <a class="text-dark ms-2" id="logo" href="https://www.beberoma.com/">Beberoma</a>
+            </div>
+            <div class=" d-flex align-items-center justify-content-end ">
+                <p class="mb-0">Created by <i class="sign">C. Taylan</i>&nbsp;&nbsp;2023</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+
+</footer>
+<!--/.Footer-->

@@ -1,0 +1,46 @@
+{% for i in messages %}
+
+{% if i.tags == "warning" %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <i class="bi bi-exclamation-triangle-fill me-2 fs-5 "></i>{{ i }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="top: 3px;"></button>
+</div>
+{% endif %}
+
+{% if i.tags == "success" %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <i class="bi bi-check-square-fill me-2 fs-5"></i>{{ i }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="top: 3px;"></button>
+</div>
+{% endif %}
+
+{% endfor %}
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Tüm alertleri seçin
+        var alerts = document.querySelectorAll('.alert');
+    
+        // Her bir alert için otomatik kapanma işlevini ayarlayın
+        alerts.forEach(function (alert) {
+            var autoClose = true; // Otomatik kapanmayı etkinleştirmek için true kullanın
+            var delay = 5000; // Kapanma süresini milisaniye cinsinden ayarlayın (örnekte 5 saniye)
+    
+            function closeAlert() {
+                alert.classList.add('hide');
+    
+                setTimeout(function () {
+                    alert.remove();
+                }, 700); // Bootstrap tarafından tanımlanan geçiş süresinden (fade) 1 saniye sonra kaldırın
+            }
+    
+            if (autoClose) {
+                setTimeout(closeAlert, delay);
+            }
+    
+            alert.querySelector('.btn-close').addEventListener('click', closeAlert);
+        });
+    });
+    </script>
+    

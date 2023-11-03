@@ -1,0 +1,66 @@
+{% extends 'admin_paneli/admin.html' %}
+{% block content %}
+
+
+
+
+
+<div class=" d-flex justify-content-end py-2">
+    <a href="{% url 'category_create' %}" class="btn btn-sm btn-primary text-light d-flex align-items-center">
+        <i class="fas fa-plus me-2 fs-4"></i><span class="fs-5">Kategori Ekle</span>
+    </a>
+</div>
+<div>
+    <table
+        class="admin-table table table-info table-sm table-striped table-hover table-responsive table-bordered border-white">
+        <thead class="table-header">
+            <tr class="table-secondary text-center">
+                <th scope="col" class="text-center" style="width: 20px;">ID</th>
+                <th scope="col">Kategori</th>
+                <th scope="col" style="max-width: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Pozisyon</th>
+                <th scope="col" style="width: 100px;">Status</th>
+                <th scope="col" style="width: 100px;">Eylem</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for item in category %}
+
+            <tr class="align-middle">
+                <th scope="row" class="text-center">{{ item.pk }}</th>
+                <td class="text-nowrap">{{ item.title }}</td>
+                <td class="text-center">{{ item.row_number }}</td>
+                <td class="text-center">
+                    {% if item.status == True %}
+                    <a class="btn btn-success btn-sm text-light" title="Etkin"><i
+                            class="fas fa-check me-2"></i>Aktif</a>
+                    {% else %}
+                    <a class="btn btn-danger btn-sm text-light" title="Devre Dışı"><i
+                            class="fas fa-xmark me-2"></i>Devre Dışı</a>
+                    {% endif %}
+                </td>
+                <td class="text-center">
+                    <div class="d-inline-flex gap-2 col-6 col-md-4 col-lg-4 mx-auto justify-content-center">
+                        <a class="btn btn-sm btn-warning text-white d-flex justify-content-center " href="{% url 'category_update' item.pk %}" role="button">
+                            <i class="fas fa-edit me-md-2 align-self-center"></i>
+                            <span class="d-none d-md-inline-block mt-1">Düzenle</span>
+                        </a>
+                        <a class="btn btn-sm btn-danger text-white d-flex justify-content-center align-items-center"
+                            href="{% url 'category_delete' item.pk %}" role="button">
+                            <i class="fas fa-trash me-md-2 align-self-center"></i>
+                            <span class="d-none d-md-inline-block mt-1">Sil</span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+
+{% endblock %}

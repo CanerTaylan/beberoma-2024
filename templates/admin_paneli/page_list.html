@@ -1,0 +1,67 @@
+{% extends 'admin_paneli/admin.html' %}
+{% block content %}
+
+
+<div class=" d-flex justify-content-end py-2">
+    <a href="{% url 'page_create' %}" class="btn btn-sm btn-primary text-light d-flex align-items-center">
+        <i class="fas fa-plus me-2 fs-4"></i><span class="fs-5">Sayfa Ekle</span>
+    </a>
+</div>
+<div class="d-flex flex-column">
+    <table
+        class="admin-table table table-info table-sm table-striped table-hover table-responsive table-bordered border-white">
+        <thead class="table-header">
+            <tr class="table-secondary text-center">
+                <th scope="col" class="text-center" style="width: 50px;">ID</th>
+                <th scope="col">Başlık</th>
+                <th scope="col" style="max-width: 300px;">Sayfa Resmi</th>
+                <th scope="col" style="width: 500px" class="d-none d-md-table-cell">İçerik</th>
+                <th scope="col" style="width: 50px;">Status</th>
+                <th scope="col" style="width: 100px;">Eylem</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for page in pages %}
+
+            <tr class="align-top">
+                <th scope="row" class="text-center">{{ page.pk }}</th>
+                <td class="text-nowrap">{{ page.title }}</td>
+                <td class="text-center">
+
+                    {% if page.cover_image %}
+                    <img src="{{ page.cover_image.url }}" alt="{{ page.title }}" class="img-fluid">
+                    {% else %}
+                    Görsel Yok
+                    {% endif %}
+                </td>
+                <td class="page_content d-none d-md-table-cell">
+                        <p>{{ page.content }}</p>
+
+
+                </td>
+                <td class="text-center">{{ page.status }}</td>
+                <td class="text-center">
+                    <div class="d-flex d-md-grid gap-2 col-6 col-md-4 col-lg-4 mx-auto justify-content-center">
+                        <a class="btn btn-sm btn-warning text-white" href="{% url 'page_update' page.pk %}"
+                            role="button">
+                            <i class="fas fa-edit"></i>
+                            <span class="d-none d-md-block">Düzenle</span>
+                        </a>
+                        <a class="btn btn-sm btn-danger text-white d-flex justify-content-center align-items-center"
+                            href="{% url 'page_delete' page.pk %}" role="button">
+                            <i class="fas fa-trash me-md-2 align-self-center"></i>
+                            <span class="d-none d-md-inline-block mt-1">Sil</span>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+
+{% endblock %}

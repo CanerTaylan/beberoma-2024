@@ -1,0 +1,76 @@
+<div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+    <div class="offcanvas-md offcanvas-start bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+        aria-labelledby="sidebarMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+                        data-bs-target="#home-collapse" aria-expanded="true">
+                        Tasarım
+                    </button>
+                    <div class="collapse show" id="home-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="{% url 'page_list' %}" class="rounded">Sayfa listesi</a></li>
+                            <li><a href="{% url 'carousel_list' %}" class="rounded">Slayt Listesi</a></li>
+                            <li><a href="{% url 'category' %}" class="rounded">Kategori</a></li>
+                            <li><a href="{% url 'subcategory' %}" class="rounded">Alt Kategori</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#dashboard-collapse" aria-expanded="false">
+                        Dashboard
+                    </button>
+                    <div class="collapse" id="dashboard-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="rounded">Overview</a></li>
+                            <li><a href="#" class="rounded">Weekly</a></li>
+                            <li><a href="#" class="rounded">Monthly</a></li>
+                            <li><a href="#" class="rounded">Annually</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#orders-collapse" aria-expanded="false">
+                        Orders
+                    </button>
+                    <div class="collapse" id="orders-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="rounded">New</a></li>
+                            <li><a href="#" class="rounded">Processed</a></li>
+                            <li><a href="#" class="rounded">Shipped</a></li>
+                            <li><a href="#" class="rounded">Returned</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="border-top my-3"></li>
+                <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#account-collapse" aria-expanded="false">
+                        Account
+                    </button>
+                    <div class="collapse" id="account-collapse">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="rounded">New...</a></li>
+                            <li><a href="#" class="rounded">Profile</a></li>
+                            <li><a href="#" class="rounded">Settings</a></li>
+                            <li><a href="#" class="rounded">Sign out</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+
+            <hr class="my-3">
+
+
+        </div>
+    </div>
+</div>

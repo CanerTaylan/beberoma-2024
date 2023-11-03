@@ -1,0 +1,52 @@
+<!-- hero starts -->
+<div class="container-fluid hero">
+    <div class="row justify-content-center d-none d-lg-flex">
+        <h3 class="text-center pb-3 fw-bold">~~~~ BAŞLIK GELECEK ~~~~</h3>
+        <div class="hero-lg">
+            <a href="#" class="hero-lg-box" style="background-image: url('https://picsum.photos/id/1/300/150');">
+                <p class="hero-title">Kız Bebek</p>
+            </a>
+            <a href="#" class="hero-lg-box" style="background-image: url('https://picsum.photos/id/2/300/150');">
+                <p class="hero-title">Erkek Bebek</p>
+            </a>
+            <a href="#" class="hero-lg-box" style="background-image: url('https://picsum.photos/id/3/300/150');">
+                <p class="hero-title">Kız Çocuk</p>
+            </a>
+            <a href="#" class="hero-lg-box" style="background-image: url('https://picsum.photos/id/4/300/150');">
+                <p class="hero-title">Erkek Çocuk</p>
+            </a>
+            <a href="#" class="hero-lg-box" style="background-image: url('https://picsum.photos/id/5/300/150');">
+                <p class="hero-title">Ayakkabı</p>
+            </a>
+            <a href="#" class="hero-lg-box" style="background-image: url('https://picsum.photos/id/6/300/150');">
+                <p class="hero-title">Aksesuar</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-lg-none hero-md">
+
+        {% for item in categories|slice:":6" %}
+
+        <div class="col">
+            <a href="#">
+                <div class="hero-md-box" id="box-{{ forloop.counter }}">
+                    <p class="hero-title">
+                        {% if item.title|length > 9 %}
+                        {{ item.title|slice:":-8" }}
+                        {% else %}
+                        {{ item.title }}
+                        {% endif %}
+                    </p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+
+<!-- hero ends -->

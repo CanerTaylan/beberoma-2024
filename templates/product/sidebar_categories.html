@@ -1,0 +1,26 @@
+<h3 class="pt-3 pb-2 text-center" style="text-decoration:underline;">Kataloğumuz</h3>
+<ul class="list-unstyled templatemo-accordion">
+    <li class="pb-3">
+        {% for category_item in categories %}
+
+        <a class="collapsed d-flex justify-content-between text-decoration-none"
+            href="{% url 'category_all' category_slug=category_item.slug %}"
+            style="font-size: 1rem; font-weight: bold;">
+            {{ category_item.title|title }}
+            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+        </a>
+
+        <ul class="collapse show list-unstyled pl-3">
+            {% for subcategory_item in category_item.subcategory_set.all %}
+
+            <li>
+                <a class="text-decoration-none"
+                    href="{% url 'subcategory_all' category_slug=category_item.slug subcategory_pk=subcategory_item.pk subcategory_slug=subcategory_item.slug %}">
+                    {{ subcategory_item.title|title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </li>
+</ul>

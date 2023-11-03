@@ -1,0 +1,42 @@
+.card.product-wap {
+
+  .card {
+    .product-overlay {
+      background: rgba(0, 0, 0, .2);
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+    }
+  }
+
+  &:hover {
+    .card {
+      .product-overlay {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .card.product-wap a {
+      color: #000;
+    }
+
+    #carousel-related-product {
+
+      .slick-slide {
+
+        &:focus {
+          outline: none !important;
+        }
+      }
+
+      .slick-dots li button {
+        &:before {
+          font-size: 15px;
+          margin-top: 20px;
+        }
+
+      }
+    }
+  }
+}

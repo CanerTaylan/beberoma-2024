@@ -1,0 +1,346 @@
+{% load static %}
+
+<!-- cards -->
+<section class="section pb-3">
+    <div class="container px-sm-3 my-4 px-auto ">
+        <h3 class="text-center pb-3 fw-bold" style="letter-spacing: 5px">~~~~ Öne Çıkan Ürünlerimiz ~~~~</h3>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 gy-4 gx-3 product-row">
+
+
+            {% for item in products %}
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center ">
+                    <div class="bg-image  hover-zoom ripple img-product " data-mdb-ripple-color="light">
+                        <img src="{{ item.cover_image.url }}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="hidden-button">
+                                <button class="btn" type="button">Ürüne git</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ item.title }}</h5>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center flex-wrap mb-3">
+                            <h5 class="me-3"
+                                style="font-weight: 900; text-align: center; color: red; text-decoration: line-through;">
+                                {{ item.old_price }} TL</h5>
+                            <h5 style="font-weight: 900; text-align: center;">{{ item.price }} TL </h5>
+                        </div>
+                        <button type="button" class="btn">Bedenler <i class="fas fa-circle-chevron-down ms-2 fs-6"></i>
+                        </button>
+                        <div class=" product-sizes">
+                            <span class="title">Bedenler</span>
+                            <ul class="list-inline sizes">
+                                <li class="list-inline-item">0-3 ay</li>
+                                <li class="list-inline-item">0-6 ay</li>
+                                <li class="list-inline-item">1 yaş</li>
+                                <li class="list-inline-item">2 yaş</li>
+                                <li class="list-inline-item">3 yaş</li>
+                                <li class="list-inline-item">8 yaş</li>
+                                <li class="list-inline-item">9 yaş</li>
+                                <li class="list-inline-item">14 yaş</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center ">
+                    <div class="bg-image  hover-zoom ripple img-product " data-mdb-ripple-color="light">
+                        <img src="{% static 'image/4002.jpg' %}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="hidden-button">
+                                <button class="btn" type="button">Ürüne git</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kız Çocuk Sweatshirt- Lila 4002</h5>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center flex-wrap mb-3">
+                            <h5 class="me-3"
+                                style="font-weight: 900; text-align: center; color: red; text-decoration: line-through;">
+                                255,90 TL</h5>
+                            <h5 style="font-weight: 900; text-align: center;">155,90 TL</h5>
+                        </div>
+                        <button type="button" class="btn">Bedenler <i class="fas fa-circle-chevron-down ms-2 fs-6"></i>
+                        </button>
+                        <div class=" product-sizes">
+                            <span class="title">Bedenler</span>
+                            <ul class="list-inline sizes">
+                                <li class="list-inline-item">0-3 ay</li>
+                                <li class="list-inline-item">0-6 ay</li>
+                                <li class="list-inline-item">1 yaş</li>
+                                <li class="list-inline-item">2 yaş</li>
+                                <li class="list-inline-item">3 yaş</li>
+                                <li class="list-inline-item">8 yaş</li>
+                                <li class="list-inline-item">9 yaş</li>
+                                <li class="list-inline-item">14 yaş</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center">
+                    <div class="bg-image  hover-zoom ripple img-product " data-mdb-ripple-color="light">
+                        <img src="{% static 'image/3004-006.jpg' %}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="hidden-button">
+                                <button class="btn" type="button">Ürüne git</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kız Çocuk Tayt 3004-006 Çiçekli</h5>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center flex-wrap mb-3">
+                            <h5 class="me-3"
+                                style="font-weight: 900; text-align: center; color: red; text-decoration: line-through;">
+                                255,90 TL</h5>
+                            <h5 style="font-weight: 900; text-align: center;">155,90 TL</h5>
+                        </div>
+                        <button type="button" class="btn">Bedenler <i class="fas fa-circle-chevron-down ms-2 fs-6"></i>
+                        </button>
+                        <div class=" product-sizes">
+                            <span class="title">Bedenler</span>
+                            <ul class="list-inline sizes">
+                                <li class="list-inline-item">0-3 ay</li>
+                                <li class="list-inline-item">0-6 ay</li>
+                                <li class="list-inline-item">1 yaş</li>
+                                <li class="list-inline-item">2 yaş</li>
+                                <li class="list-inline-item">3 yaş</li>
+                                <li class="list-inline-item">8 yaş</li>
+                                <li class="list-inline-item">9 yaş</li>
+                                <li class="list-inline-item">14 yaş</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center">
+                    <div class="bg-image  hover-zoom ripple img-product " data-mdb-ripple-color="light">
+                        <img src="{% static 'image/s10171-075-star.jpg' %}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="hidden-button">
+                                <button class="btn" type="button">Ürüne git</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">IGOR STAR SANDALET- GRİ SİMLİ S10171-075</h5>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center flex-wrap mb-3">
+                            <h5 class="me-3"
+                                style="font-weight: 900; text-align: center; color: red; text-decoration: line-through;">
+                                255,90 TL</h5>
+                            <h5 style="font-weight: 900; text-align: center;">155,90 TL</h5>
+                        </div>
+                        <button type="button" class="btn">Bedenler <i class="fas fa-circle-chevron-down ms-2 fs-6"></i>
+                        </button>
+                        <div class=" product-sizes">
+                            <span class="title">Bedenler</span>
+                            <ul class="list-inline sizes">
+                                <li class="list-inline-item">18</li>
+                                <li class="list-inline-item">21</li>
+                                <li class="list-inline-item">22</li>
+                                <li class="list-inline-item">24</li>
+                                <li class="list-inline-item">27</li>
+                                <li class="list-inline-item">28</li>
+                                <li class="list-inline-item">30</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center">
+                    <div class="bg-image  hover-zoom ripple img-product " data-mdb-ripple-color="light">
+                        <img src="{% static 'image/0581.jpg' %}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="hidden-button">
+                                <button class="btn" type="button">Ürüne git</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kız Çocuk Şort Tshirt Takım - 0581</h5>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center flex-wrap mb-3">
+                            <h5 class="me-3"
+                                style="font-weight: 900; text-align: center; color: red; text-decoration: line-through;">
+                                255,90 TL</h5>
+                            <h5 style="font-weight: 900; text-align: center;">155,90 TL</h5>
+                        </div>
+                        <button type="button" class="btn">Bedenler <i class="fas fa-circle-chevron-down ms-2 fs-6"></i>
+                        </button>
+                        <div class=" product-sizes">
+                            <span class="title">Bedenler</span>
+                            <ul class="list-inline sizes">
+                                <li class="list-inline-item">0-3 ay</li>
+                                <li class="list-inline-item">0-6 ay</li>
+                                <li class="list-inline-item">1 yaş</li>
+                                <li class="list-inline-item">2 yaş</li>
+                                <li class="list-inline-item">3 yaş</li>
+                                <li class="list-inline-item">8 yaş</li>
+                                <li class="list-inline-item">9 yaş</li>
+                                <li class="list-inline-item">14 yaş</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center">
+                    <div class="bg-image  hover-zoom ripple img-product " data-mdb-ripple-color="light">
+                        <img src="{% static 'image/0581.jpg' %}" class="img-fluid" />
+                        <a href="#!">
+                            <div class="hidden-button">
+                                <button class="btn" type="button">Ürüne git</button>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <a href="" class="card-title">Kız Çocuk Sweatshirt- Lila 4002</a>
+                        <p class="card-text">
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center flex-wrap mb-3">
+                            <h5 class="me-3"
+                                style="font-weight: 900; text-align: center; color: red; text-decoration: line-through;">
+                                255,90 TL</h5>
+                            <h5 style="font-weight: 900; text-align: center;">155,90 TL</h5>
+                        </div>
+                        <button type="button" class="btn">Bedenler <i class="fas fa-circle-chevron-down ms-2 fs-6"></i>
+                        </button>
+                        <div class=" product-sizes">
+                            <span class="title">Bedenler</span>
+                            <ul class="list-inline sizes">
+                                <li class="list-inline-item">0-3 ay</li>
+                                <li class="list-inline-item">0-6 ay</li>
+                                <li class="list-inline-item">1 yaş</li>
+                                <li class="list-inline-item">2 yaş</li>
+                                <li class="list-inline-item">3 yaş</li>
+                                <li class="list-inline-item">8 yaş</li>
+                                <li class="list-inline-item">9 yaş</li>
+                                <li class="list-inline-item">14 yaş</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+
+                <div class="card h-100 text-center">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top"
+                            alt="Palm Springs Road" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src="{% static 'image/3004-006.jpg' %}" class="card-img-top"
+                            alt="Kız Çocuk Tayt Lila 3004-006" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kız Çocuk Tayt Lila 3004-006</h5>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <h5
+                                style="font-weight: 900; text-align: center; color: red; text-decoration: line-through;">
+                            </h5>
+                            <h5 class="me-3" style="font-weight: 900; text-align: center;">155,90 TL</h5>
+                        </div>
+
+
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-danger">Sepete
+                                Ekle
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card h-100 text-center">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
+                        alt="Skyscrapers" />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- cards-ends -->
+</section>

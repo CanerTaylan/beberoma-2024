@@ -1,0 +1,349 @@
+{% load static %}
+
+<!-- tablı içerik -->
+<div class="container mt-3 tab-menu">
+    <div class="tab-nav border border-2 border-info rounded-3">
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class="nav-item" style="min-width: max-content;" role="presentation">
+                <a class="nav-link active" id="tab-1" data-mdb-toggle="tab" href="#tab-content-1" role="tab"
+                    aria-controls="tab-content-1" aria-selected="true" style="border-top-left-radius: 0.25rem;">Biz
+                    kimiz ?</a>
+            </li>
+            <li class="nav-item" style="min-width: max-content;" role="presentation">
+                <a class="nav-link" id="tab-2" data-mdb-toggle="tab" href="#tab-content-2" role="tab"
+                    aria-controls="tab-content-2" aria-selected="false">Güvenlik</a>
+            </li>
+            <li class="nav-item" style="min-width: max-content;" role="presentation">
+                <a class="nav-link" id="tab-3" data-mdb-toggle="tab" href="#tab-content-3" role="tab"
+                    aria-controls="tab-content-3" aria-selected="false">Teslimat</a>
+            </li>
+            <li class="nav-item" style="min-width: max-content;" role="presentation">
+                <a class="nav-link" id="tab-4" data-mdb-toggle="tab" href="#tab-content-4" role="tab"
+                    aria-controls="tab-content-4" aria-selected="false">Ürün Kalitesi</a>
+            </li>
+            <li class="nav-item" style="min-width: max-content;" role="presentation">
+                <a class="nav-link" id="tab-5" data-mdb-toggle="tab" href="#tab-content-5" role="tab"
+                    aria-controls="tab-content-5" aria-selected="false"
+                    style="border-top-right-radius: 0.25rem;">Değişim</a>
+            </li>
+        </ul>
+        <!-- Tabs navs -->
+
+        <!-- Tabs content -->
+        <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tab-content-1" role="tabpanel" aria-labelledby="tab-1">
+                <div class="card">
+                    <div class="row g-0 p-2">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <img src="{% static 'image/logo.png' %}" alt="Beberoma-Biz kimiz?"
+                                class="img-fluid rounded-start " />
+                        </div>
+                        <div class="col-md-9 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Biz Kimiz?</h5>
+                                <p class="card-text">
+                                    Çocuğunun ihtiyaçlarına dair, annenin aradığı pek çok şeyi rahatlıkla
+                                    bulabileceği bir mağazası olsun amacından yola çıkarak 2011 yılında kurulan
+                                    mağazamız <span id="logo">beberoma</span>, anne bilgisi ve özeni ile titizlikle
+                                    seçtiğimiz yerli ve
+                                    yabancı markaların öncelikli satış noktasıdır.
+
+                                    Ürünlerimizin en az görselliği kadar kalitesini de ön planda tutmayı, her çeşit
+                                    bütçeye ve zevke yanıt verecek çeşitliliği barındırmayı ve tüm bu süreçte asla
+                                    ve asla kaliteden ödün vermemeyi ilke edindik. Yeni doğandan 14 yaşa kadar
+                                    hizmet verdiğimiz mağazamızda, satış esnasında olduğu kadar satış sonrasında da
+                                    müşteri memnuniyetine titizlikle yaklaşmak birincil prensiplerimizden olmuştur.
+                                    Severek yaptığımız işimizde, siz müşterilerimizden aldığımız güçle büyümeye
+                                    devam ediyoruz.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab-content-2" role="tabpanel" aria-labelledby="tab-2">
+                <div class="card">
+                    <div class="row g-0 p-2">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                src="{% static 'image/guvenlik.jpg' %}" alt="Güvenlik" class="img-fluid rounded-start"
+                                style="max-height: 250px;" />
+                        </div>
+                        <div class="col-md-9 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Güvenlik</h5>
+                                <p class="card-text">
+                                    İnternet Alışverişinde En Önemli Konu Güvenli Alışveriştir.
+                                    Web Sitemiz %100’ü Türkiye İş Bankasına ait ve pek çok
+                                    büyük markaların da kart güvenliğini sağlayan firmayla
+                                    alt yapı ortaklığı ile çalışmaktadır.
+
+                                    Dolayısı ile kredi kartınızla yapacağınız alışverişinizde,
+                                    pek çok öncü firmalar ile aynı güvenliğe sahip olarak
+                                    alışveriş imkanı sunmaktadır.
+
+                                    Çünkü sizin güvenliğiniz bizim birincil önceliğimizdir.
+
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab-content-3" role="tabpanel" aria-labelledby="tab-3">
+                <div class="card">
+                    <div class="row g-0 p-2">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                src="{% static 'image/teslimat.jpg' %}" alt="Teslimat" class="img-fluid rounded-start"
+                                style="max-height: 250px;" />
+                        </div>
+                        <div class="col-md-9 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Teslimat</h5>
+                                <p class="card-text">
+                                    İnternet Alışverişinde En Önemli Konu Güvenli Alışveriştir.
+                                    Web Sitemiz %100’ü Türkiye İş Bankasına ait ve pek çok
+                                    büyük markaların da kart güvenliğini sağlayan firmayla
+                                    alt yapı ortaklığı ile çalışmaktadır.
+
+                                    Dolayısı ile kredi kartınızla yapacağınız alışverişinizde,
+                                    pek çok öncü firmalar ile aynı güvenliğe sahip olarak
+                                    alışveriş imkanı sunmaktadır.
+
+                                    Çünkü sizin güvenliğiniz bizim birincil önceliğimizdir.
+
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab-content-4" role="tabpanel" aria-labelledby="tab-4">
+                <div class="card">
+                    <div class="row g-0 p-2">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                src="{% static 'image/kalite.jpg' %}" alt="Ürün Kalitesi" class="img-fluid rounded-start"
+                                style="max-height: 250px;" />
+                        </div>
+                        <div class="col-md-9 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Ürün Kalitesi</h5>
+                                <p class="card-text">
+                                    Görselinde beğenmiş olduğunuz ürünün kalitesinin de en az görseli kadar sizi
+                                    etkileyeceğini biliyoruz. Çünkü tüm modellerimizi anne bilgisi ve titizliği ile
+                                    özenle seçiyor, yıkadıkça eskimeyecek, her daim yeni giysi gibi duracak ürünler
+                                    olmasına özen gösteriyoruz. Pamuk oranının yüksekliği ve sentetik içermemesine
+                                    dikkat ediyoruz.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab-content-5" role="tabpanel" aria-labelledby="tab-5">
+                <div class="card">
+                    <div class="row g-0 p-2">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                src="{% static 'image/değişim.jpg' %}" alt="Değişim" class=" img-fluid rounded-start"
+                                style="max-height: 250px;" />
+                        </div>
+                        <div class="col-md-9 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Değişim</h5>
+                                <p class="card-text">
+                                    Web Sitemizden satın almış olduğunuz ürünlerin, kullanılmamış ve etiketli olması
+                                    kaydı ile 15 iş günü içerisinde beberoma mağazamızdan herhangi bir ürünle
+                                    değişimini gerçekleştirebilme imkanı sunuyoruz. ( Sadece beberoma özlüce
+                                    mağazamızdan değişim için geçerlidir)
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tabs navs -->
+    <!-- Tabs content -->
+</div>
+<!-- tablı içerik-ends -->
+
+<!-- sss-accordion menu -->
+<div class="container mt-3 sss">
+    <div class="row w-100 m-0">
+        <div class="col m-auto mt-5">
+            <div class="accordion" id="accordionSSS">
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed text-center" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#sss01" data-mdb-animation-target="#sss01" aria-expanded="true"
+                        aria-controls="sss01">
+                        Biz kimiz ?
+                    </button>
+                    <div id="sss01" class="accordion-collapse collapse" data-mdb-parent="#accordionSSS">
+                        <div class="accordion-body row animated zoomIn">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center">
+                                <img src="{% static 'image/logo.png' %}" alt="Beberoma-Biz kimiz?"
+                                    class="img-fluid rounded-start" />
+                            </div>
+                            <div class="col-md-9 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Biz Kimiz?</h5>
+                                    <p class="card-text">
+                                        Çocuğunun ihtiyaçlarına dair, annenin aradığı pek çok şeyi rahatlıkla
+                                        bulabileceği bir mağazası olsun amacından yola çıkarak 2011 yılında kurulan
+                                        mağazamız <span id="logo">beberoma</span>, anne bilgisi ve özeni ile
+                                        titizlikle
+                                        seçtiğimiz yerli ve
+                                        yabancı markaların öncelikli satış noktasıdır.
+
+                                        Ürünlerimizin en az görselliği kadar kalitesini de ön planda tutmayı, her
+                                        çeşit
+                                        bütçeye ve zevke yanıt verecek çeşitliliği barındırmayı ve tüm bu süreçte
+                                        asla
+                                        ve asla kaliteden ödün vermemeyi ilke edindik. Yeni doğandan 14 yaşa kadar
+                                        hizmet verdiğimiz mağazamızda, satış esnasında olduğu kadar satış sonrasında
+                                        da
+                                        müşteri memnuniyetine titizlikle yaklaşmak birincil prensiplerimizden
+                                        olmuştur.
+                                        Severek yaptığımız işimizde, siz müşterilerimizden aldığımız güçle büyümeye
+                                        devam ediyoruz.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#sss02" aria-expanded="false" aria-controls="sss02"
+                        data-mdb-animation-target="#sss02">
+                        Güvenlik </button>
+                    <div id="sss02" class="accordion-collapse collapse" data-mdb-parent="#accordionSSS">
+                        <div class="accordion-body row animated zoomIn">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                    src="{% static 'image/guvenlik.jpg' %}" alt="Güvenlik" class="img-fluid rounded-start"
+                                    style="max-height: 250px;" />
+                            </div>
+                            <div class="col-md-9 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Güvenlik</h5>
+                                    <p class="card-text">
+                                        İnternet Alışverişinde En Önemli Konu Güvenli Alışveriştir.
+                                        Web Sitemiz %100’ü Türkiye İş Bankasına ait ve pek çok
+                                        büyük markaların da kart güvenliğini sağlayan firmayla
+                                        alt yapı ortaklığı ile çalışmaktadır.
+
+                                        Dolayısı ile kredi kartınızla yapacağınız alışverişinizde,
+                                        pek çok öncü firmalar ile aynı güvenliğe sahip olarak
+                                        alışveriş imkanı sunmaktadır.
+
+                                        Çünkü sizin güvenliğiniz bizim birincil önceliğimizdir.
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#sss03" aria-expanded="false" aria-controls="sss03"
+                        data-mdb-animation-target="#sss03">
+                        Teslimat </button>
+                    <div id="sss03" class="accordion-collapse collapse" data-mdb-parent="#accordionSSS">
+                        <div class="accordion-body row animated zoomIn">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                    src="{% static 'image/teslimat.jpg' %}" alt="Teslimat" class="img-fluid rounded-start"
+                                    style="max-height: 250px;" />
+                            </div>
+                            <div class="col-md-9 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Teslimat</h5>
+                                    <p class="card-text">
+                                        İnternet Alışverişinde En Önemli Konu Güvenli Alışveriştir.
+                                        Web Sitemiz %100’ü Türkiye İş Bankasına ait ve pek çok
+                                        büyük markaların da kart güvenliğini sağlayan firmayla
+                                        alt yapı ortaklığı ile çalışmaktadır.
+
+                                        Dolayısı ile kredi kartınızla yapacağınız alışverişinizde,
+                                        pek çok öncü firmalar ile aynı güvenliğe sahip olarak
+                                        alışveriş imkanı sunmaktadır.
+
+                                        Çünkü sizin güvenliğiniz bizim birincil önceliğimizdir.
+
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#sss04" aria-expanded="false" aria-controls="sss04"
+                        data-mdb-animation-target="#sss04">
+                        Ürün Kalitesi</button>
+                    <div id="sss04" class="accordion-collapse collapse" data-mdb-parent="#accordionSSS">
+                        <div class="accordion-body row animated zoomIn">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                    src="{% static 'image/kalite.jpg' %}" alt="Ürün Kalitesi" class="img-fluid rounded-start"
+                                    style="max-height: 250px;" />
+                            </div>
+                            <div class="col-md-9 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ürün Kalitesi</h5>
+                                    <p class="card-text">
+                                        Görselinde beğenmiş olduğunuz ürünün kalitesinin de en az görseli kadar sizi
+                                        etkileyeceğini biliyoruz. Çünkü tüm modellerimizi anne bilgisi ve titizliği
+                                        ile
+                                        özenle seçiyor, yıkadıkça eskimeyecek, her daim yeni giysi gibi duracak
+                                        ürünler
+                                        olmasına özen gösteriyoruz. Pamuk oranının yüksekliği ve sentetik
+                                        içermemesine
+                                        dikkat ediyoruz.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#sss05" aria-expanded="false" aria-controls="sss05"
+                        data-mdb-animation-target="#sss05">
+                        Değişim</button>
+                    <div id="sss05" class="accordion-collapse collapse" data-mdb-parent="#accordionSSS">
+                        <div class="accordion-body row animated zoomIn">
+                            <div class="col-md-3 d-flex align-items-center justify-content-center"> <img
+                                    src="{% static 'image/değişim.jpg' %}" alt="Değişim" class=" img-fluid rounded-start"
+                                    style="max-height: 250px;" />
+                            </div>
+                            <div class="col-md-9 card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Değişim</h5>
+                                    <p class="card-text">
+                                        Web Sitemizden satın almış olduğunuz ürünlerin, kullanılmamış ve etiketli
+                                        olması
+                                        kaydı ile 15 iş günü içerisinde beberoma mağazamızdan herhangi bir ürünle
+                                        değişimini gerçekleştirebilme imkanı sunuyoruz. ( Sadece beberoma özlüce
+                                        mağazamızdan değişim için geçerlidir)
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- sss-accordion menu ends-->
