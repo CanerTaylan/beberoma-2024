@@ -1,0 +1,117 @@
+{% extends 'base/base.html' %}
+
+
+{% block content %}
+<div class="container py-5">
+    <div class="row ">
+        <div class="col login_in_up">
+
+            <div class=" form-container" id="form-container">
+
+                <div class="form-box sign-up-box">
+                    <h2>Kayıt Formu</h2>
+                    <p>E-mail adresiniz ve şifreniz ile hızlı kayıt oluşturun</p>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input class="form-control" type="text" id="register_name" />
+                                    <label class="form-label" for="register_name">İsminiz</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input class="form-control" type="text" id="register_surname" />
+                                    <label class="form-label" for="register_surname">Soyisminiz</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline">
+                            <input type="email" id="register_email" class="form-control" />
+                            <label class="form-label" for="register_email">E-mail Adresi</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline">
+                            <input type="password" id="register_password" class="form-control" />
+                            <label class="form-label" for="register_password">Şifreniz</label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="password" id="register_password2" class="form-control" />
+                            <label class="form-label" for="register_password2">Şifenizi tekrar giriniz
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary">Kayıt Ol</button>
+                    </form>
+                </div>
+
+
+                <div class="form-box sign-in-box">
+                    <h2>Üye Girişi</h2>
+                    <form action="#">
+                        <!-- Email input -->
+                        <div class="form-outline">
+                            <input type="email" id="email" class="form-control" />
+                            <label class="form-label" for="email">E-mail Adresiniz</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline">
+                            <input type="password" id="password" class="form-control" />
+                            <label class="form-label" for="password">Şifreniz</label>
+                        </div>
+
+                        <!-- 2 column grid layout for inline styling -->
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <!-- Checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="rememberme" checked />
+                                    <label class="form-check-label" for="rememberme">Beni Hatırla</label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <!-- Simple link -->
+                                <a href="#!">Şifremi Unuttum</a>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+
+
+
+
+                    </form>
+                </div>
+
+                <div class="overlay-box">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h2>Merhaba</h2>
+                            <h5 class="py-2">Sitemize kaydınız var ise kayıt esnasında oluşturduğunuz üyelik
+                                bilgilerinizi ile giriş yapabilirsiniz.</h5>
+                            <button class="btn mt-3" id="signIn">Giriş Yap</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h2>Hesabınız yok mu ?</h2>
+                            <h5 class="py-2">Ayrıcalıklarımızdan faydalanabilmeniz ve sitemizden alışveriş yapabilmeniz
+                                için ilk önce hesap oluşturunuz.</h5>
+                            <button class="btn mt-3" id="signUp">Kayıt Ol</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

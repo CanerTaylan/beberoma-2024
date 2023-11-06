@@ -16,6 +16,7 @@ urlpatterns = [
     path('pages/', include('appPage.urls'), ),
     path('products/', include('appProduct.urls'), ),
     path('cart/', include('appCart.urls'), ),
+    path('user/', include('appUser.urls'), ),
 
 
 

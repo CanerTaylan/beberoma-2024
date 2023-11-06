@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'appCart',
     'appPage',
     'appProduct',
+    'appUser',
 ]
 
 if os.environ.get('DJANGO_DEBUG') == 'True':

@@ -92,3 +92,15 @@ $(function () {
 
 
 
+
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const formContainer = document.getElementById('form-container');
+
+signUpButton.addEventListener('click', () => {
+    formContainer.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+    formContainer.classList.remove("right-panel-active");
+});
